@@ -24,7 +24,7 @@ public class UsuarioController {
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {
             List<UsuarioEntity> usuarios = usuarioService.findAll();
-            if(usuarios != null) {
+            if(!usuarios.isEmpty()) {
                 response.setResponse(usuarios, "Usuarios encontrado", "200");
             }else {
                 response.setFail("No hay datos", "404");
@@ -40,7 +40,7 @@ public class UsuarioController {
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {
             List<UsuarioPersonaDTO> usuarios = usuarioService.findUsuarioPersona();
-            if(usuarios != null) {
+            if(!usuarios.isEmpty()) {
                 response.setResponse(usuarios, "Usuarios encontrado", "200");
             }else {
                 response.setFail("No hay datos", "404");

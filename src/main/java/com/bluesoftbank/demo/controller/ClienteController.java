@@ -24,7 +24,7 @@ public class ClienteController {
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {
             List<ClienteEntity> clientes = clienteService.findAll();
-            if(clientes != null) {
+            if(!clientes.isEmpty()) {
                 response.setResponse(clientes, "Clientes encontrado", "200");
             }else {
                 response.setFail("No hay datos", "404");
@@ -40,8 +40,7 @@ public class ClienteController {
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {
             List<ClientePersonaDTO> clientes = clienteService.findClientePersona();
-            if(clientes != null) {
-                System.out.println("clientes->{}" + clientes);
+            if(!clientes.isEmpty()) {
                 response.setResponse(clientes, "Clientes encontrado", "200");
             }else {
                 response.setFail("No hay datos", "404");
