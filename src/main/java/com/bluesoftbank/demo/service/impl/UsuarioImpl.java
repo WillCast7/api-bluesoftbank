@@ -1,6 +1,7 @@
 package com.bluesoftbank.demo.service.impl;
 
 
+import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.dao.UsuarioDao;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 import com.bluesoftbank.demo.service.UsuarioInterface;
@@ -32,6 +33,12 @@ public class UsuarioImpl implements UsuarioInterface {
     @Override
     public List<UsuarioEntity> findAll() {
         return (List<UsuarioEntity>) usuarioDao.findAll();
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<UsuarioPersonaDTO> findUsuarioPersona() {
+        return (List<UsuarioPersonaDTO>) usuarioDao.findUsuarioPersona();
     }
 
     @Transactional

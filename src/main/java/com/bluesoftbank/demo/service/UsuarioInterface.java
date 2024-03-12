@@ -1,5 +1,6 @@
 package com.bluesoftbank.demo.service;
 
+import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 
 import java.util.List;
@@ -12,5 +13,6 @@ public interface UsuarioInterface {
 
     List<UsuarioEntity> findAll();
 
+    List<UsuarioPersonaDTO> findUsuarioPersona();
     void delete(UsuarioEntity usuario);
 }

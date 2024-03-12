@@ -20,9 +20,9 @@ public class UsuarioPersonaDTO {
     private String persona_segundonombre;
     private String persona_primerapellido;
     private String persona_segundoapellido;
+    private String persona_telefono;
     private String usuario;
     private Integer rol_id;
-    private String persona_telefono;
     private String persona_direccion;
     private String usuario_correo;
     private Date fcreacion;
