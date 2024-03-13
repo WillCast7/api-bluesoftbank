@@ -1,4 +1,4 @@
-package com.bluesoftbank.demo.dto.cliente;
+package com.bluesoftbank.demo.model.dto.cliente;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

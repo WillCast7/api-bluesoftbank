@@ -1,7 +1,7 @@
 package com.bluesoftbank.demo.controller;
 
-import com.bluesoftbank.demo.dto.APIResponseDTO;
-import com.bluesoftbank.demo.dto.cliente.ClientePersonaDTO;
+import com.bluesoftbank.demo.model.dto.APIResponseDTO;
+import com.bluesoftbank.demo.model.dto.cliente.ClientePersonaDTO;
 import com.bluesoftbank.demo.model.entity.ClienteEntity;
 import com.bluesoftbank.demo.service.ClienteInterface;
 import com.bluesoftbank.demo.util.Util;
@@ -85,7 +85,6 @@ public class ClienteController {
     }
 
     @PutMapping("cliente")
-    @ResponseStatus(HttpStatus.CONTINUE)
     public ResponseEntity<APIResponseDTO<Object>> update(@RequestBody ClienteEntity cliente){
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {

@@ -1,6 +1,6 @@
 package com.bluesoftbank.demo.util;
 
-import com.bluesoftbank.demo.dto.APIResponseDTO;
+import com.bluesoftbank.demo.model.dto.APIResponseDTO;
 import org.springframework.http.HttpStatus;
 
 public class Util {

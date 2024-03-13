@@ -1,4 +1,4 @@
-package com.bluesoftbank.demo.dto.usuario;
+package com.bluesoftbank.demo.model.dto.usuario;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;

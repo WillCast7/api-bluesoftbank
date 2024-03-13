@@ -1,14 +1,11 @@
 package com.bluesoftbank.demo.controller;
 
-import com.bluesoftbank.demo.dto.APIResponseDTO;
-import com.bluesoftbank.demo.model.entity.CuentaEntity;
+import com.bluesoftbank.demo.model.dto.APIResponseDTO;
 import com.bluesoftbank.demo.model.entity.TransaccionEntity;
-import com.bluesoftbank.demo.service.CuentaInterface;
 import com.bluesoftbank.demo.service.TransaccionInterface;
 import com.bluesoftbank.demo.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

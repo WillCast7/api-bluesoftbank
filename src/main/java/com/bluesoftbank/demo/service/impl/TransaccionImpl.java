@@ -25,7 +25,10 @@ public class TransaccionImpl implements TransaccionInterface {
     @Override
     public TransaccionEntity save(TransaccionEntity transaccion) {
 
-        System.out.println("id cuenta->{} " + transaccion.getCuenta_id());
+        if(transaccion.getTransaccion_tipo().equals("Egreso") &&
+                transaccion.getTransaccion_tipo().equals("Ingreso")){
+            System.out.println("el tipo de transaccion debe ser Engreso o Egreso");
+        }
 
         //consulta de la cuenta para validar saldo
         CuentaEntity cuenta = cuentaDao.findById(transaccion.getCuenta_id()).orElse(null);
@@ -36,7 +39,8 @@ public class TransaccionImpl implements TransaccionInterface {
         }
 
         //si el monto es menor a 0
-        if( cuenta.getCuenta_saldo() - transaccion.getTransaccion_monto() < 0){
+        if( cuenta.getCuenta_saldo() - transaccion.getTransaccion_monto() < 0 &&
+            transaccion.getTransaccion_tipo().equals("Egreso")){
             return null;
         }
 

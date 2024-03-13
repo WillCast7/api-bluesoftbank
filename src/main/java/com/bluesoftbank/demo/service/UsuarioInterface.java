@@ -1,6 +1,6 @@
 package com.bluesoftbank.demo.service;
 
-import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
+import com.bluesoftbank.demo.model.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 
 import java.util.List;

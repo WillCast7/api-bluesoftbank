@@ -1,7 +1,7 @@
 package com.bluesoftbank.demo.controller;
 
-import com.bluesoftbank.demo.dto.APIResponseDTO;
-import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
+import com.bluesoftbank.demo.model.dto.APIResponseDTO;
+import com.bluesoftbank.demo.model.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 import com.bluesoftbank.demo.service.UsuarioInterface;
 import com.bluesoftbank.demo.util.Util;

@@ -1,7 +1,7 @@
 package com.bluesoftbank.demo.service.impl;
 
 
-import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
+import com.bluesoftbank.demo.model.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.dao.UsuarioDao;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 import com.bluesoftbank.demo.service.UsuarioInterface;

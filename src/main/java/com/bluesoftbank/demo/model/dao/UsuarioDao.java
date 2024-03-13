@@ -1,7 +1,6 @@
 package com.bluesoftbank.demo.model.dao;
 
-import com.bluesoftbank.demo.dto.cliente.ClientePersonaDTO;
-import com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO;
+import com.bluesoftbank.demo.model.dto.usuario.UsuarioPersonaDTO;
 import com.bluesoftbank.demo.model.entity.UsuarioEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -9,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface UsuarioDao extends CrudRepository<UsuarioEntity, Integer> {
-    @Query("SELECT new com.bluesoftbank.demo.dto.usuario.UsuarioPersonaDTO(" +
+    @Query("SELECT new com.bluesoftbank.demo.model.dto.usuario.UsuarioPersonaDTO(" +
             "per.persona_tipodni, " +
             "per.persona_dni, " +
             "per.persona_primernombre, " +

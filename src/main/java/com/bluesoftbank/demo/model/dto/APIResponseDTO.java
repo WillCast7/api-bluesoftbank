@@ -1,4 +1,4 @@
-package com.bluesoftbank.demo.dto;
+package com.bluesoftbank.demo.model.dto;
 
 import java.io.Serializable;
 import java.util.Map;
