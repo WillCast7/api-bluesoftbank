@@ -1,7 +1,9 @@
 package com.bluesoftbank.demo.controller;
 
 import com.bluesoftbank.demo.dto.APIResponseDTO;
+import com.bluesoftbank.demo.model.entity.CuentaEntity;
 import com.bluesoftbank.demo.model.entity.TransaccionEntity;
+import com.bluesoftbank.demo.service.CuentaInterface;
 import com.bluesoftbank.demo.service.TransaccionInterface;
 import com.bluesoftbank.demo.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,15 +56,15 @@ public class TransaccionController {
     }
 
     @PostMapping("transaccion")
-    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<APIResponseDTO<Object>>  create(@RequestBody TransaccionEntity transaccion){
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {
+
             TransaccionEntity transaccionCreada = transaccionService.save(transaccion);
             if(transaccionCreada != null) {
                 response.setResponse(transaccion, "transaccion creada correctamente", "200");
             }else {
-                response.setFail("La transaccion no se pudo crear", "400");
+                response.setFail("La transaccion no se pudo realizar", "400");
             }
         }catch(DataAccessException exDt){
             response.setFailError("Error durante la insercion de la transaccion", "400", exDt.getMessage());
@@ -71,7 +73,6 @@ public class TransaccionController {
     }
 
     @PutMapping("transaccion")
-    @ResponseStatus(HttpStatus.CONTINUE)
     public ResponseEntity<APIResponseDTO<Object>> update(@RequestBody TransaccionEntity transaccion){
         APIResponseDTO<Object> response = new APIResponseDTO<>();
         try {

@@ -22,7 +22,7 @@ public class CuentaEntity implements Serializable {
     private Integer cuenta_id;
 
     @Column(name = "cuenta_saldo")
-    private String cuenta_saldo;
+    private Integer cuenta_saldo;
 
     @Column(name = "cuenta_tipo")
     private String cuenta_tipo;
